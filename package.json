@@ -4,7 +4,7 @@
   "description": "hoi",
   "main": "keystone.js",
   "scripts": {
-    "start": "keystone.js"
+    "start": "node keystone.js"
   },
   "repository": {
     "type": "git",

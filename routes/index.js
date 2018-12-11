@@ -16,8 +16,8 @@ exports = module.exports = function (app) {
     app.post('/api/event', routes.api.event.post);
   };
 
-  module.exports = function (req, res) {
-    if (!req.body.name || !req.body.startTime || !req.body.endTime) {
-        return res.sendError('incomplete data set');
-      }
+  exports = module.exports = function (req, res) {
+  if (!req.body.name || !req.body.startTime || !req.body.endTime) {
+    return res.sendError('incomplete data set');
+  }
 };
