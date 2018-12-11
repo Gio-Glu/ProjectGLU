@@ -11,9 +11,10 @@ module.exports = function (req, res) {
     var newEvent = new Event.model();
     Event.updateItem(newEvent, req.body);
 
-};
-Event.updateItem(newEvent, req.body, function (error) {
+
+    Event.updateItem(newEvent, req.body, function (error) {
     res.locals.enquirySubmitted = true;
     if (error) res.locals.saveError = true;
     res.render('addEvent');
-});
+    });
+};
