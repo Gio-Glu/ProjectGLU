@@ -1,0 +1,27 @@
+{
+  "name": "opdracht3test",
+  "version": "1.0.0",
+  "description": "hoi",
+  "main": "keystone.js",
+  "scripts": {
+    "test": "key"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gio-Glu/ProjectGLU.git"
+  },
+  "keywords": [
+    "hoi"
+  ],
+  "author": "Giovanni",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Gio-Glu/ProjectGLU/issues"
+  },
+  "homepage": "https://github.com/Gio-Glu/ProjectGLU#readme",
+  "dependencies": {
+    "keystone": "^4.0.0",
+    "node.js": "0.0.0",
+    "pug": "^2.0.3"
+  }
+}
