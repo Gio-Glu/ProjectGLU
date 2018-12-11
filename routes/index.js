@@ -11,13 +11,13 @@ exports = module.exports = function (app) {
 };
 
 exports = module.exports = function (app) {
-    app.get('/', routes.views.index)
-    app.get('/add-event', routes.views.addEvent)
-    app.post('/api/event', routes.api.event.post);
-  };
+  app.get('/', routes.views.index)
+  app.get('/add-event', routes.views.addEvent)
+  app.post('/api/event', routes.api.event.post);
+};
 
-  exports = module.exports = function (req, res) {
+exports = module.exports = function (req, res) {
   if (!req.body.name || !req.body.startTime || !req.body.endTime) {
     return res.sendError('incomplete data set');
-  }
+  };
 };
