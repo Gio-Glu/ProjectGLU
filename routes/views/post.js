@@ -40,7 +40,6 @@ exports = module.exports = function (req, res) {
 	});
 
 
-	// Load comments on the Post
 	view.on('init', function (next) {
 		PostComment.model.find()
 			.where('post', locals.post)
