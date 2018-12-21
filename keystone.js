@@ -2,6 +2,7 @@ var keystone = require('keystone');
 var myip = require('quick-local-ip');
 var handlebars = require('express-handlebars');
 
+
 keystone.init({
 
 	'name': 'projectglu',
@@ -35,11 +36,24 @@ keystone.init({
 	'ga domain': process.env.GA_DOMAIN,
 
 	'chartbeat property': process.env.CHARTBEAT_PROPERTY,
-	'chartbeat domain': process.env.CHARTBEAT_DOMAIN
-
+	'chartbeat domain': process.env.CHARTBEAT_DOMAIN,
+	
+	"sessionStore": {
+		"db": {
+		  "name": "myDb",
+		  "servers": [
+			{ "host": "192.168.1.100", "port": 28001 },
+			{ "host": "192.168.1.100", "port": 28002 },
+			{ "host": "192.168.1.101", "port": 27017 }
+		  ]
+		}
+	  }
 });
 
 keystone.import('models');
+
+keystone.get('session options');
+
 
 keystone.set('locals', {
 	_: require('lodash'),
