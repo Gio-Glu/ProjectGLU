@@ -2,7 +2,7 @@
   "name": "project",
   "version": "1.0.0",
   "description": "hoi",
-  "main": "keystone.js",
+  "main": "server.js",
   "scripts": {
     "start": "node keystone.js"
   },
@@ -28,6 +28,7 @@
     "keystone": "^4.0.0",
     "lodash": "^3.10.0",
     "moment": "^2.22.2",
+    "mongodb": "^3.1.10",
     "node.js": "0.0.0",
     "package.json": "^2.0.1",
     "quick-local-ip": "^1.0.7",
