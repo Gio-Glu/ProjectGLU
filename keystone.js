@@ -2,6 +2,13 @@ var keystone = require('keystone');
 var myip = require('quick-local-ip');
 var handlebars = require('express-handlebars');
 
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+
+app.use(session({
+    secret: 'foo',
+    store: new MongoStore(options)
+}));
 
 keystone.init({
 
