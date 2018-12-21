@@ -1,1 +1,1 @@
-worker: node keystone.js
+worker: node server.js
