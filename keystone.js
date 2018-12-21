@@ -2,13 +2,6 @@ var keystone = require('keystone');
 var myip = require('quick-local-ip');
 var handlebars = require('express-handlebars');
 
-const session = require('express-session');
-const MongoStore = require('connect-mongo')(session);
-
-app.use(session({
-    secret: 'foo',
-    store: new MongoStore(options)
-}));
 
 keystone.init({
 
@@ -44,17 +37,9 @@ keystone.init({
 
 	'chartbeat property': process.env.CHARTBEAT_PROPERTY,
 	'chartbeat domain': process.env.CHARTBEAT_DOMAIN,
+	'session-store': 'mongo',
 	
-	"sessionStore": {
-		"db": {
-		  "name": "myDb",
-		  "servers": [
-			{ "host": "192.168.1.100", "port": 28001 },
-			{ "host": "192.168.1.100", "port": 28002 },
-			{ "host": "192.168.1.101", "port": 27017 }
-		  ]
-		}
-	  }
+
 });
 
 keystone.import('models');
