@@ -23,8 +23,8 @@ keystone.init({
 	}).engine,
 
 	'auto update': true,
-	'mongo': process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://localhost/keystone-demo',
-	'cloudinary config': 'cloudinary://333779167276662:_8jbSi9FB3sWYrfimcl8VKh34rI@keystone-demo',
+	'mongo': process.env.MONGO_URI || process.env.MONGOLAB_URI || process.env.DB_USER || process.env.DB_PASS,
+	'cloudinary config': process.env.CLOUDINARY_URL,
 
 	'session': true,
 	'auth': true,
@@ -63,6 +63,4 @@ keystone.set('nav', {
 });
 
 keystone.start();
-console.log('----------------------------------------------------------');
-console.log('Available at http://' + myip.getLocalIP4() + ":3000");
-console.log('----------------------------------------------------------');
+

@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Gio-Glu/ProjectGLU#readme",
   "dependencies": {
     "async": "^2.6.1",
+    "babel-install": "^2.1.0",
     "cloudinary": "^1.13.2",
     "csv": "^5.0.0",
     "express-handlebars": "^3.0.0",
@@ -33,5 +34,7 @@
     "underscore": "^1.9.1",
     "urequire": "^0.7.0-beta.25"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "postcss-import": "^8.0.2"
+  }
 }
