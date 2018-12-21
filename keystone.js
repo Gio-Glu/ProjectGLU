@@ -1,8 +1,22 @@
-var keystone = require('keystone');
-var myip = require('quick-local-ip');
+var keystone = require('keystone');;
 var handlebars = require('express-handlebars');
 
+var mongodb = require ('mongodb');
 
+var MongoClient = mongodb.MongoClient;
+
+var url = process.env.MONGODB_URI;
+
+MongoClient.connect(url, function (err,db) {
+	if(err) {
+		console.log('Unable to connect to the mongoDB server. Error:', err);
+	}else {
+		console.log('Connection established to', url);
+
+
+		db.close();
+	}
+});
 keystone.init({
 
 	'name': 'projectglu',
@@ -37,16 +51,7 @@ keystone.init({
 
 	'chartbeat property': process.env.CHARTBEAT_PROPERTY,
 	'chartbeat domain': process.env.CHARTBEAT_DOMAIN,
-	"sessionStore":{
-		"db": {
-		  "name": "myDb",
-		  "servers": [
-			{ "host": "192.168.1.100", "port": 28001 },
-			{ "host": "192.168.1.100", "port": 28002 },
-			{ "host": "192.168.1.101", "port": 27017 }
-		  ]
-		}
-	  }
+
 
 
 });

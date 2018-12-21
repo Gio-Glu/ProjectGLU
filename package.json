@@ -23,7 +23,7 @@
     "async": "^2.6.1",
     "babel-install": "^2.1.0",
     "cloudinary": "^1.13.2",
-    "connect-mongostore": "^0.1.4",
+    "connect-mongo": "^2.0.3",
     "csv": "^5.0.0",
     "express-handlebars": "^3.0.0",
     "keystone": "^4.0.0",
@@ -32,7 +32,6 @@
     "mongodb": "^3.1.10",
     "node.js": "0.0.0",
     "package.json": "^2.0.1",
-    "quick-local-ip": "^1.0.7",
     "underscore": "^1.9.1",
     "urequire": "^0.7.0-beta.25"
   },
