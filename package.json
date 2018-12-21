@@ -23,7 +23,7 @@
     "async": "^2.6.1",
     "babel-install": "^2.1.0",
     "cloudinary": "^1.13.2",
-    "connect-mongo": "^2.0.3",
+    "connect-mongostore": "^0.1.4",
     "csv": "^5.0.0",
     "express-handlebars": "^3.0.0",
     "keystone": "^4.0.0",
