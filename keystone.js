@@ -13,7 +13,6 @@ MongoClient.connect(url, function (err,db) {
 	}else {
 		console.log('Connection established to', url);
 
-
 		db.close();
 	}
 });
@@ -32,8 +31,8 @@ keystone.init({
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/layouts',
 		partialsDir: 'templates/partials',
-		defaultLayout: 'default',
-		helpers: new require('./templates/helpers')(),
+		defaultLayout: 'templates/layouts/default',
+		helpers: new require('templates/helpers')(),
 		extname: '.hbs',
 	}).engine,
 
