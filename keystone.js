@@ -2,7 +2,7 @@ var keystone = require('keystone');;
 var handlebars = require('express-handlebars');
 var Path = require("path");
 var mongodb = require ('mongodb');
-
+var helpers = require ('helpers');
 
 var MongoClient = mongodb.MongoClient;
 
