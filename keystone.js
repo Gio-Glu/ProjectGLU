@@ -3,6 +3,7 @@ var handlebars = require('express-handlebars');
 var Path = require("path");
 var mongodb = require ('mongodb');
 
+
 var MongoClient = mongodb.MongoClient;
 
 var url = process.env.MONGODB_URI;
@@ -32,7 +33,7 @@ keystone.init({
 		layoutsDir: Path.join('templates','layouts'),
 		partialsDir: Path.join('templates','partials'),
 		defaultLayout: 'default',
-			helpers: new require ('./helpers')(),
+			helpers: new require (Path.join('templates','helpers'))(),
 		extname: '.hbs',
 	}).engine,
 
