@@ -32,7 +32,7 @@ keystone.init({
 		layoutsDir: 'layouts',
 		partialsDir: 'partials',
 		defaultLayout: 'default',
-		helpers: new require('helpers')(),
+		helpers: new require('templates/helpers')(),
 		extname: '.hbs',
 	}).engine,
 
