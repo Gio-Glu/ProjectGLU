@@ -22,11 +22,11 @@ keystone.init({
 	'name': 'projectglu',
 	'brand': 'glu',
 
-	'favicon': 'public/favicon.ico',
+	'favicon': './public/favicon.ico',
 	'less': 'public',
 	'static': 'public',
 
-	'views': 'templates/views',
+	'views': './templates/views',
 	'view engine': 'hbs',
 
 	'custom engine': handlebars.create({
