@@ -34,7 +34,8 @@
     "package.json": "^2.0.1",
     "path": "^0.12.7",
     "underscore": "^1.9.1",
-    "urequire": "^0.7.0-beta.25"
+    "urequire": "^0.7.0-beta.25",
+    "postcss-import": "^8.0.2"
   },
   "devDependencies": {
     "postcss-import": "^8.0.2"
