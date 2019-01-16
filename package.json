@@ -1,41 +1,24 @@
 {
-  "name": "project",
-  "version": "1.0.0",
-  "description": "hoi",
-  "main": "keystone.js",
-  "scripts": {
-    "start": "node keystone.js"
-  },
+  "name": "keystone-handlebars-demo",
+  "version": "0.0.1",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gio-Glu/ProjectGLU.git"
+    "url": "https://github.com/jdarling/keystone-handlebars-demo.git"
   },
-  "keywords": [
-    "hoi"
-  ],
-  "author": "Giovanni",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/Gio-Glu/ProjectGLU/issues"
-  },
-  "homepage": "https://github.com/Gio-Glu/ProjectGLU#readme",
   "dependencies": {
-    "async": "^2.6.1",
-    "babel-install": "^2.1.0",
-    "cloudinary": "^1.13.2",
-    "connect-mongo": "^2.0.3",
-    "csv": "^5.0.0",
-    "express-handlebars": "^3.0.0",
-    "keystone": "^4.0.0",
-    "lodash": "^3.10.0",
-    "moment": "^2.22.2",
-    "mongodb": "^3.1.10",
-    "node.js": "0.0.0",
-    "object-assign": "^4.1.1",
-    "package.json": "^2.0.1",
-    "path": "^0.12.7",
-    "postcss-import": "^8.0.2",
-    "underscore": "^1.9.1",
-    "urequire": "^0.7.0-beta.25"
+    "keystone": "~0.1.55",
+    "async": "~0.2.9",
+    "underscore": "~1.5.2",
+    "csv": "0.3.6",
+    "dotenv": "0.0.3",
+    "express3-handlebars": "~0.5.0"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "scripts": {
+    "start": "server.js"
   }
 }

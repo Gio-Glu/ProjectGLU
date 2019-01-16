@@ -1,24 +1,23 @@
-var keystone = require('keystone');
-var csv = require('csv');
-var User = keystone.list("User");
+var keystone = require('keystone'),
+	csv = require('csv');
 
-exports = module.exports = function (req, res) {
-	User.model.find(function (err, results) {
-		if (err) { throw err; }
-
-		var users = results.map(function (user) {
+exports = module.exports = function(req, res) {
+	
+	keystone.list('User').model.find().exec(function(err, results) {
+		
+		var users = results.map(function(i) {
 			return {
-				firstName: user.name.first,
-				lastName: user.name.last,
-				email: user.email
-			};
+				first_name: i.name.first,
+				last_name: i.name.last,
+				email: i.email
+			}
 		});
-
-		csv.stringify(users, function (err2, data) {
-			if (err2) { throw err; }
-
-			res.set({"Content-Disposition": "attachment; filename=\"users.csv\""});
-			res.send(data);
+		
+		csv().from(users).to(res.attachment('users.csv'), {
+			header: true,
+			columns: ['first_name', 'last_name', 'email']
 		});
+		
 	});
-};
+	
+}

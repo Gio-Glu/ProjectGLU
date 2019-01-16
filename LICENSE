@@ -1,20 +1,3 @@
-Keystone Demo
-=============
-
-This site is an example of a default [Keystone](http://keystonejs.com) application.
-
-Try it out at http://demo.keystonejs.com
-
-It's a great basis to use when starting a Keystone project; just `git clone`
-this repository and start making changes.
-
-Pull requests are welcome, or if you'd like to see additional demos just open a
-new issue.
-
-Basically forked from the keystone-demo project at https://github.com/JedWatson/keystone-demo then converted some pages to handlebars, the rest are left to the user to convert.
-
-## License
-
 (The MIT License)
 
 Copyright (c) 2013 Jed Watson
